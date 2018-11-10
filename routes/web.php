@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'auth'], function (){
+
+    Route::get('/sing_in', 'SinginController@singIn')->name('sing_in');
+
+    Route::get('/sing_up', 'SingupController@singUp')->name('sing_up');
+
 });
