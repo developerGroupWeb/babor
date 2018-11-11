@@ -1,6 +1,6 @@
 @push('head')
 
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('css/css_bootstrap/bootstrap.min.css')}}">
