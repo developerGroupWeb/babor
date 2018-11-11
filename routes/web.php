@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
+Route::get('{page}', 'PageController@show')->name('page');
+
 Route::group(['prefix' => 'auth'], function (){
 
     Route::get('/sing_in', 'SinginController@singIn')->name('sing_in');

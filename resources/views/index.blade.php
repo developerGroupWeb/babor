@@ -13,13 +13,13 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="encounters.php" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
+                            <a class="nav-link" href="{{route('page', ['encounters' => 'encounters'])}}" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="singin.php" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="{{route('sing_in')}}" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
@@ -47,7 +47,7 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="encounters.php" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Rencontres</span></a>
+                            <a class="nav-link" href="{{route('page', ['encounters' => 'encounters'])}}" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Rencontres</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
@@ -66,7 +66,7 @@
             <div class="row homepage_mob">
                 <div class="col-12">
                     <div class="row">
-                        <div class="mx-auto mt-4"><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 100px;"></div>
+                        <div class="mx-auto mt-4"><img src="{{asset('images/Logo45.png"')}} style="width: 150px; height: 30px; margin-bottom: 100px;"></div>
                     </div>
                 </div>
 
@@ -97,7 +97,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row">
-                        <h6 class="my-3 mx-auto text-center"><a href="singin.php" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
+                        <h6 class="my-3 mx-auto text-center"><a href="{{route('sing_in')}}" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
                     </div>
                 </div>
                 <div class="col-12">
@@ -107,7 +107,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row">
-                        <a href="" class="mx-auto m-0"><img src="images/boton_google_play2.png"></a>
+                        <a href="" class="mx-auto m-0"><img src="{{asset('images/boton_google_play2.png')}}"></a>
                     </div>
                 </div>
                 <div class="col-12">
@@ -319,7 +319,7 @@
                             </div>
 
                             <div class="row">
-                                <small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
+                                <small class="ml-auto pr-4 pb-4 font-weight-bold">{{date('Y')}} © Babor</small>
                             </div>
                         </div>
                     </footer>
