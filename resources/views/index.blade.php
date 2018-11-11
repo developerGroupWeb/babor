@@ -199,7 +199,7 @@
                             <div class="row singupPage-home" style="padding-bottom: 50px; padding-top: 50px; padding-left: 50px;">
                                 <div class="col-12">
                                     <div class="row mb-4">
-                                        <span style="cursor: pointer;" class="bg-light px-3 py-1 rounded-circle mr-5 go-backHome"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></span>
+                                        <span class="bg-light px-3 py-1 rounded-circle mr-5 go-backHome"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></span>
                                         <h3>Bientôt fini...</h3>
                                     </div>
                                     <div class="row mb-3">

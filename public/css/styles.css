@@ -187,6 +187,11 @@ body{
 	border: 1px solid #f80759;
 }
 
+.go-backHome{
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
 .singin-btn-validate .btn{
 	color: #fff;
 	background: #bc4e9c;

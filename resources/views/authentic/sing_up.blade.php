@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                             <div class="form-check my-4" style="margin-left: 100px;">
-                                <input class="form-check-input" type="checkbox" value="" id="check">
+                                <input class="form-check-input" type="checkbox" value="" id="check" checked>
                                 <label class="form-check-label" for="check">
                                     Se souvenir de moi
                                 </label>
