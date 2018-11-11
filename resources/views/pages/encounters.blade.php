@@ -1,17 +1,25 @@
 @extends('layouts.default', ['title' => 'Babor'])
 
 @section('content')
+
 <div class="bg-light">
 <div class="container">
 	<div class="row">
 		<div class="col-lg-3 d-none d-lg-block" style="">
-			<div class="row">
-				<div class="col-12">
-					<div class="row">
-						<div class="mx-auto mt-4"><a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px; margin-bottom: 50px;"></a></div>
+			<div class="row pb-5">
+				<div class="singupBox_encounters">
+				<div class="col-12" >
+					<div class="row position-fixed" style="z-index: 10; width: 280px; height: 80px;">
+						<div class="col-12 bg-light">
+							<div class="row">
+								<div class="mx-auto mt-4">
+									<a href="{{route('home')}}"><img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 50px;"></a>
+								</div>
+							</div>
+						</div>
 					</div>
 
-					<div class="row">
+					<div class="row" style="padding-top: 85px;">
 						<div class="col">
 							<div class="row singin-btn1">
 								<a class="btn mb-3 mx-auto bg-dark" href="#" role="button"><i style="margin-right: 8px;" class="fa fa-facebook-official" aria-hidden="true"></i> <small class="font-weight-bold">Facebook</small></a>
@@ -35,7 +43,7 @@
 							    </div>
 							</div>
 							<div class="form-group row mb-4">
-							    <div class="col-sm-3">
+							    <div class="col-sm-4">
 							        <select class="row form-control">
 								      <option>Jour...</option>
 								      <option>01</option>
@@ -88,7 +96,7 @@
 							      	<option>décembre</option>
 							      </select>
 							    </div>
-							    <div class="col-sm-5">
+							    <div class="col-sm-4">
 							      <input type="text" class="row form-control" id="name" placeholder="Année...">
 							    </div>
 							</div>
@@ -111,7 +119,7 @@
 							</div>
 							
 							<div class="singin-btn-validate" style="margin-left: 50px;">
-								<button type="submit" class="btn btn-primary" role="button">S'inscrire</button>
+								<button type="submit" class="btn px-4" role="button">S'inscrire</button>
 							</div>
 							<p style="margin-left: 50px;" class="mt-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
 						</form>
@@ -122,7 +130,7 @@
 						<p class="mx-auto mt-2">Déjà membre ? <a href="singin.php">Connecte-toi</a></p>
 					</div>
 				</div>
-				
+				</div>
 			</div>
 		</div>
 
@@ -131,7 +139,7 @@
 				<header class="col-12">
 					<div class="row d-none d-sm-block d-lg-none">
 						<nav class="col-12 navbar navbar-expand-sm navbar-light">
-							<a href="index.php"><img src="images/Logo45.png" style="width: 150px; height: 30px;"></a>
+							<a href=""><img src="images/Logo45.png" style="width: 150px; height: 30px;"></a>
 
 						  <div class="collapse navbar-collapse">
 						    <div class="nav-item">
@@ -161,10 +169,11 @@
 					</div>
 
 					<div class="row">
-						<nav class=" col-12 navbar navbar-expand-sm navbar-light bg-white encounter">
+						<nav class="col-12 navbar navbar-expand-sm navbar-light bg-white encounter">
 
-						  <div class="collapse navbar-collapse">
-						    <ul class="navbar-nav">
+						  <div class="row collapse navbar-collapse" id="navHead-encounters">
+
+						    <ul class="navbar-nav firstNav">
 						      <li class="nav-item">
 						        <a class="nav-link" href="#"><i class="fa fa-heart fa-2x" aria-hidden="true"></i></a>
 						      </li>
@@ -173,10 +182,12 @@
 						        <a class="nav-link" href="#"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a>
 						      </li>
 						    </ul>
+
 						    <sup class="nav-item">
 						    	<div style="background-color: red; border-radius: 100px; padding: 5px;"></div>
 						    </sup>
-						    <div class="nav-item">
+
+						    <div class="nav-item textcontentNav">
 						    	<h4>
 						    		<a href="" class="nav-link">
 						    		<span>Prenom</span>, 
@@ -188,7 +199,7 @@
 						    	</span>
 						    </div>
 
-						    <ul class="navbar-nav ml-auto">
+						    <ul class="navbar-nav ml-auto scdNav">
 						      <li class="nav-item">
 						        <a class="nav-link" href="#" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
 						      </li>
@@ -205,34 +216,54 @@
 				</header>
 			</div>
 
-			<div class="col-12">
-				<div class="row">
-					<div class="mb-5" style=" background-color: #333;">
-						<img src="images/imag.jpg" class=" mx-auto b-block" style="">
-					</div>
-				</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="row" style=" background-color: #333; max-height: 450px; min-height: 450px;">
+							<div class="col-sm-1" style="cursor: pointer;">
+								<div class="row">
+									<a class="text-light mx-auto" style="margin-top: 200px;"><i class="fa fa-angle-left fa-3x" aria-hidden="true"></i></a>
+								</div>
+							</div>
 
-				<hr class="row">
-				<footer class="row">
-					<div class="col-12 bg-white">
-						<div class="row">
-							<div class="footerContent">
-								<a href="">A propos</a>
-								<a href="">CGU</a>
-								<a href="">Confidentialité</a>
-								<a href="">Liens rapides</a>
-								<a href="">Aide</a>
+							<div class="col-sm-10">
+								<div class="row" id="mySlides">
+									<img src="{{asset('images/imag.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">
+									<!--<img src="{{asset('images/imag.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">
+									<img src="{{asset('images/imfine.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">-->
+								</div>
+							</div>
+
+							<div class="col-sm-1" style="cursor: pointer;">
+								<div class="row" >
+									<a class="text-light mx-auto" style="margin-top: 200px;"><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></a>
+								</div>
+							</div>
+						<div class="badge py-2 px-3 text-light" style="position: absolute; top: 400px; left: 40px;  background: rgba(0,0,0,0.6);"><i class="fa fa-camera" aria-hidden="true"></i> 1/5</div>
+					</div>
+
+					<hr class="row">
+					<footer class="row">
+						<div class="col-12 bg-white">
+							<div class="row">
+								<div class="footerContent">
+									<a href="">A propos</a>
+									<a href="">CGU</a>
+									<a href="">Confidentialité</a>
+									<a href="">Liens rapides</a>
+									<a href="">Aide</a>
+								</div>
+							</div>
+
+							<div class="row">
+								<small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
 							</div>
 						</div>
-
-						<div class="row">
-							<small class="ml-auto pr-4 pb-4 font-weight-bold">2018 © Babor</small>
-						</div>
-					</div>
-				</footer>
+					</footer>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 </div>
+
 @stop

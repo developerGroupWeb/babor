@@ -12,7 +12,7 @@
                             <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
                         </li>
                         <li class="nav-item d-block d-lg-none">
-                            <a class="navbar-brand" href="index.php" style="color: #fff;"><img src="{{asset('images/Logo45.png')}}"></a>
+                            <a class="navbar-brand" href="{{route('home')}}" style="color: #fff;"><img src="{{asset('images/Logo45.png')}}"></a>
                         </li>
                     </ul>
 
