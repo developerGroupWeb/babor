@@ -3,6 +3,19 @@
 @section('content')
 
 <div class="bg-light">
+	<div class="d-none d-md-block" style="position: fixed; right: 10px; top: 300px; z-index: 10;">
+		<div class="ml-2 mb-2"><a href="{{route('sing_up')}}"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></a></div>
+		<div class="mb-3">
+			<a href=""><img src="{{asset('images/images2.jpg')}}" class="rounded-circle" style="height: 40px; width: 40px;"></a>
+		</div>
+		<div class="mb-3">
+			<img src="{{asset('images/images1.jpg')}}" class="rounded-circle" style="height: 40px; width: 40px;">
+		</div>
+		<div class="mb-3">
+			<img src="{{asset('images/images.jpg')}}" class="rounded-circle" style="height: 40px; width: 40px;">
+		</div>
+		<div class="ml-2 mb-2"><a href="{{route('sing_up')}}"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></a></div>
+	</div>
 <div class="container">
 	<div class="row">
 		<div class="col-lg-3 d-none d-lg-block" style="">
@@ -179,7 +192,7 @@
 						      </li>
 						      
 						      <li class="nav-item">
-						        <a class="nav-link" href="#"><i class="fa fa-times fa-2x skip" aria-hidden="true"></i></a>
+						        <a class="nav-link" href="{{route('page', ['encounters' => 'encounters'])}}"><i class="fa fa-times fa-2x skip" aria-hidden="true"></i></a>
 						      </li>
 						    </ul>
 
@@ -189,12 +202,12 @@
 
 						    <div class="nav-item textcontentNav">
 						    	<h4>
-						    		<a href="{{route('sing_up')}}" class="nav-link text-dark">
+						    		<a href="" class="nav-link text-dark">
 						    		<span>Prenom</span>, 
 						    		<span>age</span></a>
 						    	</h4>
 						    	<span>
-						    		<a href="{{route('sing_up')}}" class="nav-link">
+						    		<a href="" class="nav-link">
 							    		<span class="text-dark" style="font-size: 20px; font-weight: 500;">0</span> 
 							    		<span>
 						    			<small style="color: #737373;">ses centres d'intérêt</small></span>
@@ -204,48 +217,13 @@
 
 						    <ul class="navbar-nav ml-auto scdNav">
 						      <li class="nav-item">
-						        <a class="nav-link" href="{{route('sing_up')}}" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
+						        <a class="nav-link" href="#" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="{{route('sing_up')}}" title="Ajouter aux favoris"><i class="fa fa-star-o fa-x" aria-hidden="true"></i></a>
+						        <a class="nav-link" href="#" title="Chatter"><i class="fa fa-comment-o fa-x" aria-hidden="true"></i></a>
 						      </li>
-						      <li class="nav-item dropdown">
-						        <a class="nav-link " id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;"><i class="fa fa-sliders fa-x" aria-hidden="true"></i></a>
-
-						        <div class="dropdown-menu dropdown-menu-right p-3 shadow" aria-labelledby="dropdownMenuLink" style="width: 250px; border-radius: 10px;">
-							    	<form method="" action="">
-							    		<div class="font-weight-bold" style="color: #737373;">Afficher</div>
-							    		<div class="custom-control custom-radio custom-control-inline">
-										  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-										  <label class="custom-control-label" for="customRadioInline1" style="color: #8c8c8c;">Hommes</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline">
-										  <input type="radio" checked id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
-										  <label class="custom-control-label" for="customRadioInline2" style="color: #8c8c8c;">Filles</label>
-										</div>
-							    		
-							    		<div class="mt-3">
-							    			<label for="customRange1" class="font-weight-bold" style="color: #737373;">Âge</label>
-											<input type="range" class="custom-range" id="customRange1">
-							    		</div>
-
-							    		<div class="col-12 mt-3">
-							    			<div class="row">
-								    			<div class="col-6">
-								    				<div class="row">
-								    					<input type="submit" name="" value="Jouer" class="btn bg-primary text-light px-4 py-1" id="search">
-								    				</div>
-								    			</div>
-
-								    			<div class="col-6">
-								    				<div class="row">
-								    					<input type="reset" name="" value="Annuler" class="btn text-dark bg-light py-1 px-3" id="reset" data-toggle="dropdown">
-								    				</div>
-								    			</div>
-								    		</div>
-							    		</div>
-							    	</form>
-							  	</div>
+						      <li class="nav-item">
+						        <a class="nav-link" href="#" title="Ajouter aux favoris"><i class="fa fa-star-o fa-x" aria-hidden="true"></i></a>
 						      </li>
 						    </ul>
 						  </div>
@@ -256,28 +234,126 @@
 
 			<div class="row">
 				<div class="col-12">
-					<div class="row" style=" background-color: #333; max-height: 450px; min-height: 450px;">
-							<div class="col-sm-1" style="cursor: pointer;">
+					<div class="row" style=" background-color: #333;">
+
+							<div class="col-sm-12">
 								<div class="row">
-									<a class="text-light mx-auto" href="{{route('sing_up')}}" style="margin-top: 200px;"><i class="fa fa-angle-left fa-3x" aria-hidden="true"></i></a>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<a href=""><img src="{{asset('images/images1.jpg')}}" class="w-100" style="height: 150px;"></a>
+										</div>
+									</div>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<img src="{{asset('images/images2.jpg')}}" class="w-100" style="height: 150px;">
+										</div>
+									</div>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<img src="{{asset('images/imfine.jpg')}}" class="w-100" style="height: 150px;">
+										</div>
+									</div>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<img src="{{asset('images/images.jpg')}}" class="w-100" style="height: 150px;">
+										</div>
+									</div>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<img src="{{asset('images/imag.jpg')}}" class="w-100" style="height: 150px;">
+										</div>
+									</div>
+									<div class="col-4 col-md-2">
+										<div class="row">
+											<img src="{{asset('images/tyyy.jpg')}}" class="w-100" style="height: 150px;">
+										</div>
+									</div>
 								</div>
 							</div>
 
-							<div class="col-sm-10">
-								<div class="row" id="mySlides">
-									<a href="{{route('sing_up')}}" class="mx-auto">
-									<img src="{{asset('images/imag.jpg')}}" class="img-fluid" style="max-height: 400px; min-height: 450px;"></a>
-									<!--<img src="{{asset('images/imag.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">
-									<img src="{{asset('images/imfine.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">-->
+						<div class="badge py-1 px-2 text-light" style="position: absolute; top: 10px; left: 10px;  background: rgba(0,0,0,0.6);"><i class="fa fa-camera" aria-hidden="true"></i> <span>6</span>
+						</div>
+					</div>
+
+					<div class="row mt-4">
+						<div class="col-8 pl-5">
+							<div class="">
+								<h5 class="row" style="color: #737373;">Emplacement</h5>
+
+								<h6 style="color: #a6a6a6;" class="row">Ville, Pays</h6>
+							</div>
+
+							<hr class="row">
+
+							<div class="">
+								<h5 class="row" style="color: #737373;">Je suis ici pour</h5>
+
+								<h6 class="row" style="color: #a6a6a6;">Sortir avec une fille qui a entre 22 et 32 ans</h6>
+							</div>
+
+							<hr class="row">
+
+							<div class="">
+								<h5 class="row" style="color: #737373;">Informations personnelles</h5>
+
+								<div class="row">
+									<div class="col-8 col-md-6 col-xl-5">
+										<div class="row mb-2">
+											<div class="col-6">
+												<div class="row">
+													Situation amoureuse :
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="row">
+													<a href="{{route('sing_up')}}" class="ml-auto">Voir</a>
+												</div>
+											</div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-6">
+												<div class="row">
+													Résidence :
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="row">
+													<a href="{{route('sing_up')}}" class="ml-auto">Voir</a>
+												</div>
+											</div>
+										</div>
+										<div class="row mb-2">
+											<div class="col-6">
+												<div class="row">
+													Enfants :
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="row">
+													<a href="{{route('sing_up')}}" class="ml-auto">Voir</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
-							<div class="col-sm-1" style="cursor: pointer;">
-								<div class="row" >
-									<a class="text-light mx-auto" href="{{route('sing_up')}}" style="margin-top: 200px;"><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></a>
-								</div>
+							<hr class="row">
+
+							<div class="">
+								<h5 class="row" style="color: #737373;">Centres d'intérêt</h5>
+
+								<h6 class="row" style="color: #a6a6a6;"></h6>
 							</div>
-						<div class="badge py-2 px-3 text-light" style="position: absolute; top: 400px; left: 40px;  background: rgba(0,0,0,0.6);"><i class="fa fa-camera" aria-hidden="true"></i> 1/5</div>
+
+							<hr class="row">
+
+							<div class="">
+								<h5 class="row" style="color: #737373;">Langues</h5>
+
+								<h6 class="row" style="color: #a6a6a6;">Russe</h6>
+							</div>
+						</div>
 					</div>
 
 					<hr class="row">

@@ -3,13 +3,18 @@ $(document).ready(function() {
 
 	$(".singupPage-home").hide();
 
-		$(".singupPage-call").click(function() {
-			$(".singupPage-home").show();
-			$(".secondFace-home").hide();
-		});
+	$(".singupPage-call").click(function() {
+		$(".singupPage-home").show();
+		$(".secondFace-home").hide();
+	});
 
-		$(".go-backHome").click(function(){
-			$(".singupPage-home").hide();
-			$(".secondFace-home").show();
-		})
+	$(".go-backHome").click(function(){
+		$(".singupPage-home").hide();
+		$(".secondFace-home").show();
+	});
+
+	$('#fa-sliders, #reset').click(function() {
+		$('#searchBox').slideToggle();
+	});
+
 })

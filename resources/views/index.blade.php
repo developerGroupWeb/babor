@@ -16,7 +16,7 @@
                             <a class="nav-link" href="{{route('page', ['encounters' => 'encounters'])}}" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
+                            <a class="nav-link" href="{{route('page', ['dating' => 'dating'])}}" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('sing_in')}}" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
@@ -66,7 +66,7 @@
             <div class="row homepage_mob">
                 <div class="col-12">
                     <div class="row">
-                        <div class="mx-auto mt-4"><img src="{{asset('images/Logo45.png"')}} style="width: 150px; height: 30px; margin-bottom: 100px;"></div>
+                        <div class="mx-auto mt-4"><img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 100px;"></div>
                     </div>
                 </div>
 
