@@ -216,14 +216,22 @@ body{
 .encounter .fa-x{
 	font-size: 20px;
 	border-radius: 100px;
-	padding: 13px;
-	border: 1px solid #f1f1f1;
+	padding: 10px 12px;
+	border: 2px solid #cccccc;
 }
 
-.encounter .fa-2x{
+.encounter .like{
+	border-radius: 100px;
+	padding: 17px 16px 13px;
+	border: 1px solid #ff5c33;
+	color: #ff5c33;
+}
+
+.encounter .skip{
 	border-radius: 100px;
 	padding: 15px 18px;
-	border: 2px solid #b6b6b6;
+	border: 1px solid #b6b6b6;
+	color: #cccccc;
 }
 
 .singupBox_encounters{
@@ -242,24 +250,34 @@ body{
 }
 }
 
-@media(max-width: 768px) {
-	.encounter .fa-x{
+@media(max-width: 992px) {
+	.encounter .fa-x{	
 		border-radius: 100px;
-		padding: 10px;
+		padding: 6px 8px;
 		border: 1px solid #b6b6b6;
 	}
 
-	.encounter .fa-2x{
+	.encounter .like{
 		border-radius: 100px;
-		padding: 10px 13px;
-		border: 1px solid #b6b6b6;
+		padding: 13px 13px 10px;
+		border: 1px solid #ff5c33;
+		color: #ff5c33;
 	}
+
+	.encounter .skip{
+		border-radius: 100px;
+		padding: 12px 15px;
+		border: 1px solid #b6b6b6;
+		color: #cccccc;
+	}
+
 	#navHead-encounters .firstNav i{
 		font-size: 15px;
 	}
 
 	#navHead-encounters .scdNav i{
-		font-size: 10px;
+		font-size: 12px;
+		font-weight: bold;
 	}
 
 	.textcontentNav h4{
