@@ -169,86 +169,22 @@
 					</div>
 
 					<div class="row">
-						<nav class="col-12 navbar navbar-expand-sm navbar-light bg-white encounter">
+						<nav class="col-12 navbar navbar-expand-sm navbar-light bg-white encounter py-3">
 
-						  <div class="row collapse navbar-collapse" id="navHead-encounters">
+						    <div class="row collapse navbar-collapse">
+							    <ul class="navbar-nav">
+							      <li class="nav-item">
+							        <h5 style="color: #737373;" class="ml-4">Je suis ici pour sortir avec quelqu'un dans le monde entier</h5>
+							      </li>
+							    </ul>
 
-						    <ul class="navbar-nav firstNav">
-						      <li class="nav-item">
-						        <a class="nav-link" href="#"><i class="fa fa-heart fa-2x like" aria-hidden="true"></i></a>
-						      </li>
-						      
-						      <li class="nav-item">
-						        <a class="nav-link" href="#"><i class="fa fa-times fa-2x skip" aria-hidden="true"></i></a>
-						      </li>
-						    </ul>
 
-						    <sup class="nav-item">
-						    	<div style="background-color: #cccccc; border-radius: 100px; padding: 4px; margin-top: -20px;"></div>
-						    </sup>
-
-						    <div class="nav-item textcontentNav">
-						    	<h4>
-						    		<a href="" class="nav-link text-dark">
-						    		<span>Prenom</span>, 
-						    		<span>age</span></a>
-						    	</h4>
-						    	<span>
-						    		<a href="" class="nav-link">
-							    		<span class="text-dark" style="font-size: 20px; font-weight: 500;">0</span> 
-							    		<span>
-						    			<small style="color: #737373;">ses centres d'intérêt</small></span>
-						    		</a>
-						    	</span>
+							    <ul class="navbar-nav ml-auto scdNav">
+							      <li class="nav-item">
+							        <a class="nav-link " style="cursor: pointer;"><i class="fa fa-sliders fa-x" aria-hidden="true"></i></a>
+							      </li>
+							    </ul>
 						    </div>
-
-						    <ul class="navbar-nav ml-auto scdNav">
-						      <li class="nav-item">
-						        <a class="nav-link" href="#" title="Voir le profil"><i class="fa fa-user-o fa-x" aria-hidden="true"></i></a>
-						      </li>
-						      <li class="nav-item">
-						        <a class="nav-link" href="#" title="Ajouter aux favoris"><i class="fa fa-star-o fa-x" aria-hidden="true"></i></a>
-						      </li>
-						      <li class="nav-item dropdown">
-						        <a class="nav-link " id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;"><i class="fa fa-sliders fa-x" aria-hidden="true"></i></a>
-
-						        <div class="dropdown-menu dropdown-menu-right p-3 shadow" aria-labelledby="dropdownMenuLink" style="width: 250px; border-radius: 10px;">
-							    	<form method="" action="">
-							    		<div class="font-weight-bold" style="color: #737373;">Afficher</div>
-							    		<div class="custom-control custom-radio custom-control-inline">
-										  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-										  <label class="custom-control-label" for="customRadioInline1" style="color: #8c8c8c;">Hommes</label>
-										</div>
-										<div class="custom-control custom-radio custom-control-inline">
-										  <input type="radio" checked id="customRadioInline2" name="customRadioInline2" class="custom-control-input">
-										  <label class="custom-control-label" for="customRadioInline2" style="color: #8c8c8c;">Filles</label>
-										</div>
-							    		
-							    		<div class="mt-3">
-							    			<label for="customRange1" class="font-weight-bold" style="color: #737373;">Ages</label>
-											<input type="range" class="custom-range" id="customRange1">
-							    		</div>
-
-							    		<div class="col-12 mt-3">
-							    			<div class="row">
-								    			<div class="col-6">
-								    				<div class="row">
-								    					<input type="submit" name="" value="Jouer" class="btn bg-primary text-light px-4 py-1" id="search">
-								    				</div>
-								    			</div>
-
-								    			<div class="col-6">
-								    				<div class="row">
-								    					<input type="reset" name="" value="Annuler" class="btn text-dark bg-light py-1 px-3" id="reset" data-toggle="dropdown">
-								    				</div>
-								    			</div>
-								    		</div>
-							    		</div>
-							    	</form>
-							  	</div>
-						      </li>
-						    </ul>
-						  </div>
 						</nav>
 					</div>
 				</header>
@@ -256,27 +192,8 @@
 
 			<div class="row">
 				<div class="col-12">
-					<div class="row" style=" background-color: #333; max-height: 450px; min-height: 450px;">
-							<div class="col-sm-1" style="cursor: pointer;">
-								<div class="row">
-									<a class="text-light mx-auto" style="margin-top: 200px;"><i class="fa fa-angle-left fa-3x" aria-hidden="true"></i></a>
-								</div>
-							</div>
-
-							<div class="col-sm-10">
-								<div class="row" id="mySlides">
-									<img src="{{asset('images/imag.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">
-									<!--<img src="{{asset('images/imag.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">
-									<img src="{{asset('images/imfine.jpg')}}" class="img-fluid mx-auto" style="max-height: 400px; min-height: 450px;">-->
-								</div>
-							</div>
-
-							<div class="col-sm-1" style="cursor: pointer;">
-								<div class="row" >
-									<a class="text-light mx-auto" style="margin-top: 200px;"><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></a>
-								</div>
-							</div>
-						<div class="badge py-2 px-3 text-light" style="position: absolute; top: 400px; left: 40px;  background: rgba(0,0,0,0.6);"><i class="fa fa-camera" aria-hidden="true"></i> 1/5</div>
+					<div class="row">
+							
 					</div>
 
 					<hr class="row">

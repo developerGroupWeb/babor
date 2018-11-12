@@ -50,7 +50,7 @@
                             <a class="nav-link" href="{{route('page', ['encounters' => 'encounters'])}}" style="color: #fff;"><span><i class="fa fa-heart-o" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Rencontres</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
+                            <a class="nav-link" href="{{route('page', ['dating' => 'dating'])}}" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link border border-light rounded" href="{{route('sing_in')}}" style="color: #fff;">Se connecter</a>
