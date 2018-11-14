@@ -68,49 +68,51 @@
                     <div class="row">
                         <div class="mx-auto mt-4"><img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 100px;"></div>
                     </div>
-                </div>
 
-                <div class="col-12">
                     <div class="row">
-                        <h5 class="mx-auto mb-4 text-white">Je suis:</h5>
+                        <h3 class="mx-auto mb-4 text-white">Bienvenue sur Babor</h5>
                     </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row btn-mob1">
-                        <a class="btn mb-2 mx-auto btn btn-outline-warning" href="#" role="button">Homme</a>
+                        <div class="col-10 offset-1">
+                            <div class="row">
+                                <a class="btn mb-2 btn w-100" href="{{route('sing_up')}}" role="button">Créer un compte</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12">
-                    <div class="row btn-mob2">
-                        <a class="btn mx-auto btn btn-outline-warning" href="#" role="button">Femme</a>
-                    </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row">
                         <h5 class="mx-auto mt-1.5 mb-2">ou</h5>
                     </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row btn-mob3">
-                        <a class="btn mb-1 mx-auto" href="#" role="button"><i class="fa fa-facebook-official" aria-hidden="true"></i> Continuer avec Facebook</a>
+                        <div class="col-10 offset-1">
+                            <div class="row">
+                                <a class="btn mb-1 w-100" href="#" role="button"><i class="fa fa-facebook-official" aria-hidden="true"></i> Continuer avec Facebook</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12">
+
+                    <div class="row btn-mob3">
+                        <div class="col-10 offset-1">
+                            <div class="row">
+                                <a class="btn mb-1 w-100" href="#" role="button"><i class="fa fa-google" aria-hidden="true"></i> Continuer avec Google</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <h6 class="my-3 mx-auto text-center"><a href="{{route('sing_in')}}" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
                     </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row">
                         <div class="mx-auto text-muted text-center"><small>Ne t'inquiete pas! Nous ne postons rien sur Facebook</small></div>
                     </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row">
                         <a href="" class="mx-auto m-0"><img src="{{asset('images/boton_google_play2.png')}}"></a>
                     </div>
-                </div>
-                <div class="col-12">
+
                     <div class="row footer" style="display: inline; font-size: 13px;">
                         <div class="mx-auto text-center text-muted footerbox">
                             <a href="">Renontres</a> - 
@@ -125,6 +127,8 @@
             </div>
         </div>
     </div><!--end-->
+
+
 
 
     <!--content body on desktop-->

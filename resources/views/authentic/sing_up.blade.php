@@ -195,47 +195,69 @@
         </div>
     </div>
 
-    <!--singin page on mobile-->
-    <div class="container wow fadeInLeft pl-5 d-block d-sm-none">
-        <div class="row">
-            <div class="col-12">
-                <div class="row">
-                    <div class="mx-auto mt-4 d-inline-flex">
-                        <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+
+
+
+    <!--singup page on mobile-->
+    <div style="height: 100vh;" class="bg-light">
+        <div class="container  d-block d-sm-none">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="mx-auto mt-4 d-inline-flex">
+                            <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <form class="col-12 px-4">
+
+                    <div class="stepOne">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Comment tu t'appelles ?</h4>
+                        </div>
+
+                        <div class="form-group my-5">
+                            <input type="text" class="row mx-auto form-control" id="yourName" placeholder="Insérer votre Prénom">
+                            <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                        </div>
+                    </div>
+
+
+                    <div class="stepTow">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Salut Prenom ! C'est quoi ta date de naissance ?</h4>
+                        </div>
+                        <div class="form-group my-5">
+                            <input type="date" class="row mx-auto form-control" id="birthday" placeholder="Votre de naissance">
+                            <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-5">
+                        <div class="">
+                            <input type="submit" class="row w-100 mx-auto btn btn-primary" value="Se connecter"></button>
+                        </div>
+                    </div>
+                    <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
+                </form>
+
+                <div class="">
+                    <div class="mx-auto"><a href="{{route('home')}}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+                </div>
+            
         </div>
-
-        <form class="col-12">
-            <div class="form-group row mb-4">
-                <div class="col-12">
-                    <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-12">
-                    <input type="password" class="row form-control" id="password" placeholder="Mot de passe">
-                </div>
-            </div>
-            <div class="form-check my-4">
-                <input class="form-check-input" type="checkbox" value="" id="check">
-                <label class="form-check-label" for="check">
-                    Se souvenir de moi
-                </label>
-            </div>
-            <div class="col-12">
-                <div class="row">
-                    <button class="btn btn-primary w-100 mr-4" role="button">Se connecter</button>
-                </div>
-            </div>
-            <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
-        </form>
-
-        <div class="row">
-            <div class="mx-auto"><a href="{{route('home')}}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
-        </div>
-
     </div>
 
 @stop
