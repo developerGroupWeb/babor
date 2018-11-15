@@ -201,6 +201,11 @@ body{
 	font-size: 18px;
 }
 
+.form-check-hide input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
 
 /*------------------------Encounter css---------------------------------*/
 .encounter .fa-x{

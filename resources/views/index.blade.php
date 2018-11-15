@@ -176,17 +176,28 @@
                                         <h3 class="mb-4 col-12">Connecte-toi en répondant à quelques questions :</h3>
                                     </div>
                                     <div class="row">
-                                        <p class="mb-3 mx-auto">Tu es...</p>
+                                        <p class="mb-3 mx-auto text-center">Tu es...</p>
+                                    </div>
+
+
+                                    
+                                    <div class="row">
                                         <div class="col-12">
                                             <div class="row secondFace-btn1">
-                                                <a class="btn mb-3 mx-auto singupPage-call" href="#" role="button">Homme</a>
+                                                <div class="mx-auto btn form-check-hide form-check form-check-inline mb-4 mr-5">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                                    <label class="form-check-label" for="inlineRadio1">Homme</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="row secondFace-btn2">
-                                                <a class="btn mx-auto singupPage-call" href="#" role="button">Femme</a>
+                                                <div class="mx-auto btn form-check-hide form-check form-check-inline mb-4">
+                                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                    <label class="form-check-label" for="inlineRadio2">Femme</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

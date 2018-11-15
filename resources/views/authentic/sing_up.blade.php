@@ -202,10 +202,16 @@
     <div style="height: 100vh;" class="bg-light">
         <div class="container  d-block d-sm-none">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 mt-4">
                     <div class="row">
-                        <div class="mx-auto mt-4 d-inline-flex">
-                            <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                        <div class="col-4">
+                            <small><a href="{{route('home')}}">Retour</a></small>
+                        </div>
+
+                        <div class="col-8">
+                            <div class="ml-auto">
+                                <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,6 +221,30 @@
                 <form class="col-12 px-4">
 
                     <div class="stepOne">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Tu es :</h4>
+                        </div>
+
+                        <div class="row bg-white mx-1 rounded mt-5 mb-3 py-1 border">
+                            <div class="mx-auto  form-check form-check-hide form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOption" id="mob-inlineRadio1" value="option1">
+                                <label class="form-check-label" for="mob-inlineRadio1">Homme</label>
+                            </div>
+                        </div>
+                        <div class="row bg-white mx-1 rounded mb-5 py-1 border">
+                            <div class="mx-auto form-check form-check-hide form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOption" id="mob-inlineRadio2" value="option2">
+                                <label class="form-check-label" for="mob-inlineRadio2">Femme</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                        </div>
+                    </div>
+
+
+                    <div class="stepTwo">
                         <div class="row">
                             <h4 class="mx-auto text-center">Comment tu t'appelles ?</h4>
                         </div>
@@ -230,7 +260,7 @@
                     </div>
 
 
-                    <div class="stepTow">
+                    <div class="stepThree">
                         <div class="row">
                             <h4 class="mx-auto text-center">Salut Prenom ! C'est quoi ta date de naissance ?</h4>
                         </div>
@@ -245,17 +275,72 @@
                     </div>
 
 
-                    <div class="mb-5">
-                        <div class="">
-                            <input type="submit" class="row w-100 mx-auto btn btn-primary" value="Se connecter"></button>
+                    <div class="stepSix">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Quel est ton emplacement ?</h4>
+                        </div>
+                        <div class="form-group my-5">
+                            <input type="search" class="row mx-auto form-control" id="yourPlace" placeholder="Votre ville ou pays de residence">
+                            <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
                         </div>
                     </div>
-                    <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
-                </form>
 
-                <div class="">
-                    <div class="mx-auto"><a href="{{route('home')}}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
-                </div>
+
+                    <div class="stepFor">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">C'est quoi ton adresse email ?</h4>
+                        </div>
+                        <div class="form-group my-5">
+                            <input type="email" class="row mx-auto form-control" id="mail" placeholder="Votre email">
+                            <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                        </div>
+                    </div>
+
+                    <div class="stepFor">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Il faut choisir un mot de passe</h4>
+                        </div>
+                        <div class="form-group my-5">
+                            <input type="password" class="row mx-auto form-control" id="pw" placeholder="Choisir un mot de passe">
+                            <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
+                        </div>
+
+                        <div class="mb-5">
+                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                        </div>
+                    </div>
+
+                    <div class="stepFive my-5">
+                        <div class="row">
+                            <h4 class="mx-auto text-center">Vérifie tes e-mails</h4>
+                        </div>
+                        <div class="row">
+                            <small class="mx-auto text-center text-muted">Consulte l'e-mail que l'on vient de t'envonyer à l'adresse et pense à regarder dans tes spams au cas où !</small>                        </div>
+                        <div class="row my-4">
+                            <small id="resendMail" class="text-center mx-auto text-muted"><a href="">Renvoyer l'e-mail</a></small>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-5">
+                        <div class="">
+                            <input type="submit" class="row w-100 mx-auto btn btn-primary" value="C'est parti!"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row">
+                <div class="mx-auto"><a href="{{route('home')}}"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+            </div>
             
         </div>
     </div>
