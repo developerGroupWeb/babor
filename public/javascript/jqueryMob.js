@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$(".singupPage-home").hide();
 
-	$(".singupPage-call").click(function() {
+	$(".secondFace-home р").click(function() {
 		$(".singupPage-home").show();
 		$(".secondFace-home").hide();
 	});
@@ -16,5 +16,7 @@ $(document).ready(function() {
 	$('#fa-sliders, #reset').click(function() {
 		$('#searchBox').slideToggle();
 	});
+
+	echo('ok');
 
 })

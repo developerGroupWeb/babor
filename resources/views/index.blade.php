@@ -279,12 +279,12 @@
                                                   </select>
                                                 </div>
                                                 <div class="col-sm-4">
-                                                  <input type="text" class="row form-control" id="name" placeholder="Année...">
+                                                  <input type="text" class="row form-control" id="yourName" placeholder="Année...">
                                                 </div>
                                             </div>
                                             <div class="form-group row mb-4">
                                                 <div class="col-sm-12">
-                                                  <input type="search" class="row form-control" id="name" placeholder="Saisir ton emplacement">
+                                                  <input type="search" class="row form-control" id="search" placeholder="Saisir ton emplacement">
                                                   <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                                                 </div>
                                             </div>
