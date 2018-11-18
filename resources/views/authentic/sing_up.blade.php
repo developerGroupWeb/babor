@@ -220,7 +220,7 @@
             <div class="row">
                 <form class="col-12 px-4">
 
-                    <div class="stepOne">
+                    <div class="stepOne wow fadeInUp">
                         <div class="row">
                             <h4 class="mx-auto text-center">Tu es :</h4>
                         </div>
@@ -243,8 +243,8 @@
                         </div>
                     </div>
 
-
-                    <div class="stepTwo">
+                        <div class="content-hide">
+                    <div class="stepTwo wow fadeInUp">
                         <div class="row">
                             <h4 class="mx-auto text-center">Comment tu t'appelles ?</h4>
                         </div>
@@ -275,12 +275,12 @@
                     </div>
 
 
-                    <div class="stepSix">
+                    <div class="stepFor">
                         <div class="row">
                             <h4 class="mx-auto text-center">Quel est ton emplacement ?</h4>
                         </div>
                         <div class="form-group my-5">
-                            <input type="search" class="row mx-auto form-control" id="yourPlace" placeholder="Votre ville ou pays de residence">
+                            <input type="search" class="row mx-auto form-control" id="yourPlace" placeholder="Ville ou pays de residence">
                             <small id="passwordHelpBlock" class="text-center form-text text-muted">Your password must be 8-20 characters</small>
                         </div>
 
@@ -290,7 +290,7 @@
                     </div>
 
 
-                    <div class="stepFor">
+                    <div class="stepFive">
                         <div class="row">
                             <h4 class="mx-auto text-center">C'est quoi ton adresse email ?</h4>
                         </div>
@@ -304,9 +304,9 @@
                         </div>
                     </div>
 
-                    <div class="stepFor">
+                    <div class="stepSix">
                         <div class="row">
-                            <h4 class="mx-auto text-center">Il faut choisir un mot de passe</h4>
+                            <h4 class="mx-auto text-center">Choisir un mot de passe</h4>
                         </div>
                         <div class="form-group my-5">
                             <input type="password" class="row mx-auto form-control" id="pw" placeholder="Choisir un mot de passe">
@@ -314,11 +314,13 @@
                         </div>
 
                         <div class="mb-5">
-                            <div class="mx-auto row btn btn-dark w-100 nextForm">Continuer</div>
+                            <div class="">
+                                <input type="submit" class="row w-100 mx-auto btn btn-primary" value="C'est parti!">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="stepFive my-5">
+                    <div class="stepSeven my-5">
                         <div class="row">
                             <h4 class="mx-auto text-center">Vérifie tes e-mails</h4>
                         </div>
@@ -328,13 +330,7 @@
                             <small id="resendMail" class="text-center mx-auto text-muted"><a href="">Renvoyer l'e-mail</a></small>
                         </div>
                     </div>
-
-
-                    <div class="mb-5">
-                        <div class="">
-                            <input type="submit" class="row w-100 mx-auto btn btn-primary" value="C'est parti!"></button>
                         </div>
-                    </div>
                 </form>
             </div>
 

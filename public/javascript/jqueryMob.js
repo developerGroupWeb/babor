@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$(".singupPage-home").hide();
 
-	$(".secondFace-home р").click(function() {
+	$(".form-check-input").click(function() {
 		$(".singupPage-home").show();
 		$(".secondFace-home").hide();
 	});
@@ -17,6 +17,12 @@ $(document).ready(function() {
 		$('#searchBox').slideToggle();
 	});
 
-	echo('ok');
+	$(".content-hide > *").hide();
+		
+		$(".nextForm").click(function() {
 
+			$(".stepOne").hide(300);
+			$(".content-hide > .stepTwo").show(500);
+
+		});
 })
