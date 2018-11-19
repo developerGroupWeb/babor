@@ -1,4 +1,4 @@
-$(function(){
+/**$(function(){
 
     var slider         = $('#slider');
     var slideContainer = slider.find('.slides');
@@ -13,7 +13,7 @@ $(function(){
 
         setInterval(function(){
 
-            slideContainer.animate({
+            ({
 
                     marginLeft: '-='+width
 
@@ -34,4 +34,4 @@ $(function(){
 
 
 
-});
+});**/

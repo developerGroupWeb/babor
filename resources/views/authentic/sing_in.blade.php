@@ -122,18 +122,24 @@
 
 <!--singin page on mobile-->
 <div class="mobile-bg d-block d-sm-none" style="height: 100vh;">
-    <div class="container wow fadeInLeft">
+    <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mt-4">
                 <div class="row">
-                    <div class="mx-auto mt-4 d-inline-flex">
-                        <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                    <div class="col-4">
+                        <small><a href="{{route('home')}}">Retour</a></small>
+                    </div>
+
+                    <div class="col-8">
+                        <div class="ml-auto">
+                            <img src="{{asset('images/Logo45.png')}}" style="width: 150px; height: 30px; margin-bottom: 80px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row pl-4">
+        <div class="row pl-4 wow fadeInUp">
             <form class="col-12">
                 <div class="form-group row mb-4">
                     <div class="col-12">
@@ -146,7 +152,7 @@
                     </div>
                 </div>
                 <div class="form-check my-4">
-                    <input class="form-check-input" type="checkbox" value="" id="check">
+                    <input class="form-check-input" type="checkbox" checked value="" id="check">
                     <label class="form-check-label" for="check">
                         Se souvenir de moi
                     </label>
@@ -158,11 +164,6 @@
                 </div>
                 <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
             </form>
-        </div>
-
-        <div class="row">
-            <a href="{{route('home')}}"><div class="mx-auto bg-light px-3 py-1 rounded-circle go-backHome"><a href="{{route('home')}}"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div></a></a>
-
         </div>
     </div>
 </div>
