@@ -48,7 +48,8 @@
                         <p>Rejoins la <strong>communauté des nouveaux amis sur Babor ! Rencontre et chatte.</strong></p>
                     </div>
                     <div class="row mb-5">
-                        <form class="col-sm-12" method="post" action="">
+
+                        <form class="col-sm-12" id="submit" method="post" action="">
 
                             {{csrf_field()}}
 
@@ -113,11 +114,13 @@
                                 </div>
                                 <div class="col-sm-4">
                                     <input type="text" class="row form-control" id="name" placeholder="Année...">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
                                     <input type="search" class="row form-control" id="name" placeholder="Saisir ton emplacement">
+                                    <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                                 </div>
                             </div>
@@ -132,11 +135,13 @@
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
                                     <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                                    <span class="error"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
                                     <input type="password" class="row form-control" id="password" placeholder="Crée ton mot de passe">
+                                    <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">Le mot de passe doit comprendre au moins 5 caractères</small>
                                 </div>
                             </div>
@@ -149,7 +154,9 @@
                             <div class="singin-btn-validate" style="margin-left: 100px;">
                                 <button type="submit" class="btn col-6 row font-weight-bold" role="button">S'inscrire</button>
                             </div>
+
                         </form>
+
                     </div>
                     <small style="font-size: 11px;">En continuant, tu confirmes avoir lu et accepté nos <a href="">Conditions Générales d'Utilisation</a>, notre <a href="">Politique de Confidentialité</a> ainsi que notre <a href="">Politique en matière de Cookies</a></small>
                 </div>
@@ -237,5 +244,7 @@
         </div>
 
     </div>
+
+    <script src="{{asset('js/sing_up.js')}}"></script>
 
 @stop

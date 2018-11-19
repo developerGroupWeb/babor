@@ -48,24 +48,24 @@
                     <p>Saisis tes identifiants de connexion. <a href="{{route('sing_up')}}">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
                 </div>
                 <div class="row">
-                    <form class="col-sm-12" method="post" action="">
+                    <form class="col-sm-12" method="post" action="" id="submit">
 
                         {{csrf_field()}}
 
                         <div class="form-group row mb-4">
                             <label for="email" class="mr-4">Identifiant</label>
                             <div class="col-md-8 col-sm-12">
-                                <input type="email" class="form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                                <input type="email" name="email" class="form-control" id="email" placeholder="E-mail ou numéro de téléphone">
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="password" class="">Mot de passe</label>
                             <div class="col-md-8 col-sm-12">
-                                <input type="password" class="form-control" id="password" placeholder="Mot de passe">
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Mot de passe">
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
-                            <input class="form-check-input" type="checkbox" value="" id="check">
+                            <input class="form-check-input" type="checkbox" name="remember" value="" id="check">
                             <label class="form-check-label" for="check">
                                 Se souvenir de moi
                             </label>
@@ -75,6 +75,7 @@
                         </div>
                         <p style="margin-left: 110px;" class="mt-2"><a href="" style="color: #a1a1a1;">Mot de passe oublié ?</a></p>
                     </form>
+
                 </div>
             </div>
             <div class="col-md-3 col-sm-12 box2">
@@ -165,5 +166,8 @@
         </div>
     </div>
 </div>
+
+<script src="{{asset('js/sing_in.js')}}"></script>
+
 
 @stop
