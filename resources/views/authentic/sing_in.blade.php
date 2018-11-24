@@ -160,7 +160,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-12">
-                        <input type="password" name="password" class="row form-control" id="password" placeholder="Mot de passe">
+                        <input type="password" name="password" class="row form-control" id="passwordMob" placeholder="Mot de passe">
                     </div>
                 </div>
                 <div class="form-check my-4">
@@ -184,24 +184,34 @@
 
     $(function () {
 
-        var idLogin     = $('#login');
-        var idMobLogin  = $('#loginMob');
-        var idbutton    = $('#button');
-        var idMobbutton = $('#buttonMob');
+        var idLogin        = $('#login');
+        var idPassword     = $('#password');
+        var idMobLogin     = $('#loginMob');
+        var idMobPassword  = $('#passwordMob');
+        var idbutton       = $('#button');
+        var idMobbutton    = $('#buttonMob');
+
 
         idLogin.add(idMobLogin).focus();
 
-        $(document).on('keyup', '#login, #loginMob', function () {
+        $(document).on('blur', '#login, #loginMob', function () {
 
             var login    = idLogin.val();
             var loginMob = idMobLogin.val();
 
-            if(login == '' || loginMob == ''){
+            if(login == ''){
 
-                idbutton.add(idMobbutton).attr('disabled', 'disabled').css('cursor', 'not-allowed');
+                idbutton.attr('disabled', 'disabled').css('cursor', 'not-allowed');
             }else{
 
-                idbutton.add(idMobbutton).removeAttr('disabled').css('cursor', 'pointer');
+                idbutton.removeAttr('disabled').css('cursor', 'pointer');
+            }
+            if(loginMob == ''){
+
+                idMobbutton.attr('disabled', 'disabled').css('cursor', 'not-allowed');
+            }else{
+
+                idMobbutton.removeAttr('disabled').css('cursor', 'pointer');
             }
 
         });
@@ -221,7 +231,7 @@
                     if(result != ''){
 
                         $('.alert').html(result).show();
-
+                        idPassword.add(idMobPassword).val('');
                     }else{
                         window.location = "{{route('home')}}";
                     }
