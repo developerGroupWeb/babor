@@ -76,7 +76,7 @@
                             </label>
                         </div>
                         <div class="singin-btn-validate" style="margin-left: 100px;">
-                            <button type="submit" class="btn font-weight-bold" role="button">Se connecter</button>
+                            <button type="submit" class="btn font-weight-bold" role="button" id="button">Se connecter</button>
                         </div>
                         <p style="margin-left: 110px;" class="mt-2"><a href="" style="color: #a1a1a1;">Mot de passe oublié ?</a></p>
                     </form>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-10">
                     <div class="row mx-auto">
-                        <button class="btn btn-primary w-100" role="button">Se connecter</button>
+                        <button class="btn btn-primary w-100" role="button" id="button">Se connecter</button>
                     </div>
                 </div>
                 <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
@@ -183,6 +183,26 @@
 <script>
 
     $(function () {
+
+        var idLogin  = $('#login');
+        var idbutton = $('#button');
+        var login = idLogin.val();
+
+        idLogin.focus();
+
+        $(document).on('blur', '#singInSubmit, #singInMobSubmit', function () {
+
+            if(login == ''){
+
+                idbutton.attr('disabled', 'disabled').css('cursor', 'not-allowed');
+            }else{
+
+                idbutton.removeAttr('disabled').css('cursor', 'pointer');
+            }
+
+        });
+
+
 
         $(document).on('submit', '#singInSubmit, #singInMobSubmit', function (event) {
 

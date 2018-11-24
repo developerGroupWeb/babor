@@ -226,7 +226,9 @@
             </div>
 
             <div class="row">
-                <form class="col-12 px-4">
+                <form class="col-12 px-4" method="post" action="" id="sinUpSumbit">
+
+                    {{csrf_field()}}
 
                     <div class="stepOne wow fadeInUp">
                         <div class="row">
@@ -235,13 +237,13 @@
 
                         <div class="row bg-white mx-1 rounded mt-5 mb-3 py-1 border">
                             <div class="mx-auto  form-check form-check-hide form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOption" id="mob-inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="gender" id="mob-inlineRadio1" value="homme">
                                 <label class="form-check-label" for="mob-inlineRadio1">Homme</label>
                             </div>
                         </div>
                         <div class="row bg-white mx-1 rounded mb-5 py-1 border">
                             <div class="mx-auto form-check form-check-hide form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOption" id="mob-inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="gender" id="mob-inlineRadio2" value="femme">
                                 <label class="form-check-label" for="mob-inlineRadio2">Femme</label>
                             </div>
                         </div>
