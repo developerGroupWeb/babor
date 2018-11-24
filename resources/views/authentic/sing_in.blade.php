@@ -155,7 +155,7 @@
 
                 <div class="form-group row mb-4">
                     <div class="col-12">
-                        <input type="text" name="login" class="row form-control" id="login"  placeholder="E-mail ou numéro de téléphone">
+                        <input type="text" name="login" class="row form-control" id="loginMob"  placeholder="E-mail ou numéro de téléphone">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-10">
                     <div class="row mx-auto">
-                        <button class="btn btn-primary w-100" role="button" id="button">Se connecter</button>
+                        <button class="btn btn-primary w-100" role="button" id="buttonMob">Se connecter</button>
                     </div>
                 </div>
                 <p class="mx-auto text-center p-2"><a href="" style="color: #b6b6b6;">Mot de passe oublié ?</a></p>
@@ -184,20 +184,24 @@
 
     $(function () {
 
-        var idLogin  = $('#login');
-        var idbutton = $('#button');
-        var login = idLogin.val();
+        var idLogin     = $('#login');
+        var idMobLogin  = $('#loginMob');
+        var idbutton    = $('#button');
+        var idMobbutton = $('#buttonMob');
 
-        idLogin.focus();
+        idLogin.add(idMobLogin).focus();
 
-        $(document).on('blur', '#singInSubmit, #singInMobSubmit', function () {
+        $(document).on('keyup', '#login, #loginMob', function () {
 
-            if(login == ''){
+            var login    = idLogin.val();
+            var loginMob = idMobLogin.val();
 
-                idbutton.attr('disabled', 'disabled').css('cursor', 'not-allowed');
+            if(login == '' || loginMob == ''){
+
+                idbutton.add(idMobbutton).attr('disabled', 'disabled').css('cursor', 'not-allowed');
             }else{
 
-                idbutton.removeAttr('disabled').css('cursor', 'pointer');
+                idbutton.add(idMobbutton).removeAttr('disabled').css('cursor', 'pointer');
             }
 
         });
@@ -217,6 +221,7 @@
                     if(result != ''){
 
                         $('.alert').html(result).show();
+
                     }else{
                         window.location = "{{route('home')}}";
                     }
