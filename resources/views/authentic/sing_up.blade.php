@@ -1,6 +1,7 @@
 @extends('layouts.default', ['title' => 'Babor inscription'])
 
 @section('content')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <div class="d-none d-sm-block">
         <div class="d-none d-sm-block singin-nav" style="background: #9d1e65;">
@@ -27,10 +28,10 @@
                                 <a class="nav-link" style="color: #fff;">Déjà membre ?</a>
                             </li>
                             <li class="nav-item d-sm-none d-md-block">
-                                <a class="nav-link" href="{{route('sing_in')}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">connexion</a>
+                                <a class="nav-link" href="{{route('sing_in', ['ref' => 'enjoy'])}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">connexion</a>
                             </li>
                             <li class="nav-item d-sm-block d-md-none">
-                                <a class="nav-link" href="{{route('sing_in')}} style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Connexion</a>
+                                <a class="nav-link" href="{{route('sing_in', ['ref' => 'enjoy'])}} style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Connexion</a>
                             </li>
                         </ul>
                     </div>
@@ -49,22 +50,22 @@
                     </div>
                     <div class="row mb-5">
 
-                        <form class="col-sm-12" id="submit" method="post" action="">
+                        <form class="col-sm-12" id="ajaxSubmit" method="post" action="">
 
                             {{csrf_field()}}
 
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
-                                    <input type="text" class="row form-control" id="name" placeholder="Prénom">
+                                    <input type="text" name="name" class="row form-control" id="name" placeholder="Prénom">
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-4">
-                                    <select class="row form-control">
-                                        <option>Jour...</option>
-                                        <option>01</option>
-                                        <option>02</option>
-                                        <option>03</option>
+                                    <select class="row form-control" name="day">
+                                        <option value="">Jour...</option>
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
                                         <option>04</option>
                                         <option>05</option>
                                         <option>06</option>
@@ -96,57 +97,57 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <select class="row form-control">
-                                        <option>Mois...</option>
-                                        <option>janvier</option>
-                                        <option>février</option>
-                                        <option>mars</option>
-                                        <option>avril</option>
-                                        <option>mai</option>
-                                        <option>juin</option>
-                                        <option>juillet</option>
-                                        <option>août</option>
-                                        <option>septembre</option>
-                                        <option>octobre</option>
-                                        <option>novembre</option>
-                                        <option>décembre</option>
+                                    <select class="row form-control" name="month">
+                                        <option value="">Mois...</option>
+                                        <option value="1">janvier</option>
+                                        <option value="2">février</option>
+                                        <option value="3">mars</option>
+                                        <option value="4">avril</option>
+                                        <option value="5">mai</option>
+                                        <option value="6">juin</option>
+                                        <option value="7">juillet</option>
+                                        <option value="8">août</option>
+                                        <option value="9">septembre</option>
+                                        <option value="10">octobre</option>
+                                        <option value="11">novembre</option>
+                                        <option value="12">décembre</option>
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="text" class="row form-control" id="name" placeholder="Année...">
+                                    <input type="text" name="year" class="row form-control" id="" placeholder="Année...">
                                     <span class="error"></span>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
-                                    <input type="search" class="row form-control" id="name" placeholder="Saisir ton emplacement">
+                                    <input type="search" name="city" class="row form-control" id="" placeholder="Saisir ton emplacement">
                                     <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                                 </div>
                             </div>
                             <div class="form-check form-check-inline mb-4 mr-5">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="homme">
                                 <label class="form-check-label" for="inlineRadio1">Homme</label>
                             </div>
                             <div class="form-check form-check-inline mb-4">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="femme">
                                 <label class="form-check-label" for="inlineRadio2">Femme</label>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
-                                    <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                                    <input type="email" name="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
                                     <span class="error"></span>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
-                                    <input type="password" class="row form-control" id="password" placeholder="Crée ton mot de passe">
+                                    <input type="password" name="password" class="row form-control" id="password" placeholder="Crée ton mot de passe">
                                     <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">Le mot de passe doit comprendre au moins 5 caractères</small>
                                 </div>
                             </div>
                             <div class="form-check my-4" style="margin-left: 100px;">
-                                <input class="form-check-input" type="checkbox" value="" id="check" checked>
+                                <input class="form-check-input" type="checkbox" name="remember" value="1" id="check" checked>
                                 <label class="form-check-label" for="check">
                                     Se souvenir de moi
                                 </label>

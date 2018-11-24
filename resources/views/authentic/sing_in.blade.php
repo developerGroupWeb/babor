@@ -1,6 +1,8 @@
 @extends('layouts.default', ['title' => 'Babor connexion'])
 
 @section('content')
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 <div class="d-none d-sm-block">
     <div class="d-none d-sm-block singin-nav" style="background: #9d1e65;">
@@ -27,10 +29,10 @@
                             <a class="nav-link" style="color: #fff;">Pas encore membre ?</a>
                         </li>
                         <li class="nav-item d-sm-none d-md-block">
-                            <a class="nav-link" href="{{route('sing_up')}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Rejoindre Babor</a>
+                            <a class="nav-link" href="{{route('sing_up', ['ref' => 'lading'])}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Rejoindre Babor</a>
                         </li>
                         <li class="nav-item d-sm-block d-md-none">
-                            <a class="nav-link" href="{{route('sing_up')}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Créer un compte</a>
+                            <a class="nav-link" href="{{route('sing_up', ['ref' => 'lading'])}}" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Créer un compte</a>
                         </li>
                     </ul>
                 </div>
@@ -45,17 +47,20 @@
                     <h4>Connecte-toi sur Badoo</h4>
                 </div>
                 <div class="row mr-5">
-                    <p>Saisis tes identifiants de connexion. <a href="{{route('sing_up')}}">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
+                    <p>Saisis tes identifiants de connexion. <a href="{{route('sing_up', ['ref' => 'lading'])}}">Inscris-toi ici</a> si ce n'est pas encore fait !</p>
                 </div>
                 <div class="row">
-                    <form class="col-sm-12" method="post" action="" id="submit">
+
+                    <div class="alert alert-danger" style="display: none"></div>
+
+                    <form class="col-sm-12" method="post" action="" id="singInSubmit">
 
                         {{csrf_field()}}
 
                         <div class="form-group row mb-4">
                             <label for="email" class="mr-4">Identifiant</label>
                             <div class="col-md-8 col-sm-12">
-                                <input type="email" name="email" class="form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                                <input type="text" name="login" class="form-control" id="login"  placeholder="E-mail ou numéro de téléphone">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -65,7 +70,7 @@
                             </div>
                         </div>
                         <div class="form-check my-4" style="margin-left: 100px;">
-                            <input class="form-check-input" type="checkbox" name="remember" value="" id="check">
+                            <input class="form-check-input" type="checkbox" name="remember" value="1" id="check">
                             <label class="form-check-label" for="check">
                                 Se souvenir de moi
                             </label>
@@ -78,6 +83,7 @@
 
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-12 box2">
                 <p class="my-4 text-center">Se connecter avec :</p>
                 <div class="row">
@@ -140,19 +146,25 @@
         </div>
 
         <div class="row pl-4 wow fadeInUp">
-            <form class="col-12">
+
+            <div class="alert alert-danger" style="display: none"></div>
+
+            <form class="col-12" method="post" action="" id="singInMobSubmit">
+
+                {{csrf_field()}}
+
                 <div class="form-group row mb-4">
                     <div class="col-12">
-                        <input type="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
+                        <input type="text" name="login" class="row form-control" id="login"  placeholder="E-mail ou numéro de téléphone">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-12">
-                        <input type="password" class="row form-control" id="password" placeholder="Mot de passe">
+                        <input type="password" name="password" class="row form-control" id="password" placeholder="Mot de passe">
                     </div>
                 </div>
                 <div class="form-check my-4">
-                    <input class="form-check-input" type="checkbox" checked value="" id="check">
+                    <input class="form-check-input" name="remember" type="checkbox" checked value="1" id="check">
                     <label class="form-check-label" for="check">
                         Se souvenir de moi
                     </label>
@@ -168,7 +180,33 @@
     </div>
 </div>
 
-<script src="{{asset('js/sing_in.js')}}"></script>
+<script>
+
+    $(function () {
+
+        $(document).on('submit', '#singInSubmit, #singInMobSubmit', function (event) {
+
+            event.preventDefault();
+
+            $.ajax({
+                url: "{{route('sing_in.check')}}",
+                method: 'POST',
+                data: $(this).serialize(),
+                success: function (result) {
+
+                    if(result != ''){
+
+                        $('.alert').html(result).show();
+                    }else{
+                        window.location = "{{route('home')}}";
+                    }
+                }
+            });
+
+
+        });
+    });
+</script>
 
 
 @stop

@@ -11,14 +11,17 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'Home\\HomeController@index')->name('home');
+
+Route::get('login/sing_in', 'Authentic\\SinginController@singIn')->name('sing_in');
+Route::post('login/sing_in/check', 'Authentic\\SinginController@check')->name('sing_in.check');
+
+Route::get('register/sing_up', 'Authentic\\SingupController@singUp')->name('sing_up');
+Route::post('register/sing_up', 'Authentic\\SingupController@store')->name('sing_up');
 
 Route::get('{page}', 'PageController@show')->name('page');
 
-Route::group(['prefix' => 'auth'], function (){
+Route::get('profile', function(){
+    return view('pages.profile');
+})->name('profile');
 
-    Route::get('/sing_in', 'SinginController@singIn')->name('sing_in');
-
-    Route::get('/sing_up', 'SingupController@singUp')->name('sing_up');
-
-});

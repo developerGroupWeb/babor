@@ -19,7 +19,7 @@
                             <a class="nav-link" href="{{route('page', ['dating' => 'dating'])}}" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('sing_in')}}" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                            <a class="nav-link" href="{{route('sing_in', ['ref' => 'enjoy'])}}" style="color: #fff;"><i class="fa fa-user-o" aria-hidden="true"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" style="color: #111; background: #eee; padding: 5px 20px 5px 20px; border-radius: 10px;">Fr</a>
@@ -53,7 +53,7 @@
                             <a class="nav-link" href="{{route('page', ['dating' => 'dating'])}}" style="color: #fff;"><span><i class="fa fa-globe" aria-hidden="true"></i></span> <span class="d-md-none d-lg-inline-block">Trouver à côté</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border border-light rounded" href="{{route('sing_in')}}" style="color: #fff;">Se connecter</a>
+                            <a class="nav-link border border-light rounded" href="{{route('sing_in', ['ref' => 'enjoy'])}}" style="color: #fff;">Se connecter</a>
                         </li>
                     </ul>
                 </div>
@@ -76,7 +76,7 @@
                     <div class="row btn-mob1">
                         <div class="col-10 offset-1">
                             <div class="row">
-                                <a class="btn mb-2 btn w-100" href="{{route('sing_up')}}" role="button">Créer un compte</a>
+                                <a class="btn mb-2 btn w-100" href="{{route('sing_up', ['ref' => 'lading'])}}" role="button">Créer un compte</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                     </div>
 
                     <div class="row">
-                        <h6 class="my-3 mx-auto text-center"><a href="{{route('sing_in')}}" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
+                        <h6 class="my-3 mx-auto text-center"><a href="{{route('sing_in', ['ref' => 'enjoy'])}}" class=" font-weight-bold">Tu a deja un compte ? Connexion</a></h6>
                     </div>
 
                     <div class="row">
@@ -317,7 +317,7 @@
                     <footer class="row">
                         <div class="col-12">
                             <div class="row">
-                                <a class="mx-auto" href="" title="Télécharger babor sur google play"><img src="images/googleplaylogo.png" style="width: 250px; height: 150px;"></a>
+                                <a class="mx-auto" href="" title="Télécharger babor sur google play"><img src="{{asset('images/googleplaylogo.png')}}" style="width: 250px; height: 150px;"></a>
                             </div>
                             <hr class="bg-dark">
                         </div>

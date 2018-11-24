@@ -1,29 +1,30 @@
 $(function(){
 
-    var validate = true; ;
-
-    var ID = [
-
-        'name',
-        'day',
-        'month',
-        'year',
-        'city',
-        'sex',
-        'email',
-        'password',
-        'remember'
-    ];
-    function messageRequire(id){
-
-        return $(id).next('.error').html('Your ' + $(id).attr('id') + ' is required');
-    }
-
-    $('#submit').submit(function () {
+    $(document).on('submit', '#ajaxSubmit', function (event) {
 
 
+        event.preventDefault();
+       // alert('Amaelle')
+        /*$.ajaxSetup({
 
-        return validate;
-    });
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+        });*/
+
+
+        $.ajax({
+
+            url : "{{ url('register/sing_up') }}",
+            method : 'post',
+            data : $(this).serialize(),
+            success: function(result){
+                console.log(result);
+
+            }
+        });
+
+        alert($(this).serialize())
+    })
 
 });
