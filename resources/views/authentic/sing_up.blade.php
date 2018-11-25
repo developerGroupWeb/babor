@@ -50,7 +50,7 @@
                     </div>
                     <div class="row mb-5">
 
-                        <form class="col-sm-12" id="ajaxSubmit" method="post" action="">
+                        <form class="col-sm-12" id="ajaxSubmit" method="post" action="{{ route('check') }}">
 
                             {{csrf_field()}}
 
@@ -58,42 +58,17 @@
                                 <div class="col-sm-12">
                                     <input type="text" name="name" class="row form-control" id="name" placeholder="Prénom">
                                 </div>
+                                <span style="color: red; font-style: italic">
+                                    {{ $errors->first('name') }}
+                                </span>
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-4">
                                     <select class="row form-control" name="day">
                                         <option value="">Jour...</option>
-                                        <option value="1">01</option>
-                                        <option value="2">02</option>
-                                        <option value="3">03</option>
-                                        <option>04</option>
-                                        <option>05</option>
-                                        <option>06</option>
-                                        <option>07</option>
-                                        <option>08</option>
-                                        <option>09</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                        <option>20</option>
-                                        <option>21</option>
-                                        <option>22</option>
-                                        <option>23</option>
-                                        <option>24</option>
-                                        <option>25</option>
-                                        <option>26</option>
-                                        <option>27</option>
-                                        <option>28</option>
-                                        <option>29</option>
-                                        <option>30</option>
-                                        <option>31</option>
+                                        @for($i = 1; $i < 32; $i++)
+                                             <option value="{{$i}}">{{$i}}</option>
+                                        @endfor
                                     </select>
                                 </div>
                                 <div class="col-sm-4">
@@ -117,6 +92,16 @@
                                     <input type="text" name="year" class="row form-control" id="" placeholder="Année...">
                                     <span class="error"></span>
                                 </div>
+
+                                <span style="color: red; font-style: italic">
+
+                                    {{ $errors->first('day') }}
+
+                                    @if(isset($error))
+                                            {{ $error }}
+                                    @endif
+                                </span>
+
                             </div>
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
@@ -124,7 +109,14 @@
                                     <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">p. ex. cotonou, Benin</small>
                                 </div>
+
+                                <span style="color: red; font-style: italic">
+                                    {{ $errors->first('city') }}
+                                </span>
                             </div>
+
+
+
                             <div class="form-check form-check-inline mb-4 mr-5">
                                 <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="homme">
                                 <label class="form-check-label" for="inlineRadio1">Homme</label>
@@ -133,11 +125,21 @@
                                 <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="femme">
                                 <label class="form-check-label" for="inlineRadio2">Femme</label>
                             </div>
+
+                            <span style="color: red; font-style: italic">
+                                {{ $errors->first('gender') }}
+                            </span>
+
                             <div class="form-group row mb-4">
                                 <div class="col-sm-12">
                                     <input type="email" name="email" class="row form-control" id="email" placeholder="E-mail ou numéro de téléphone">
                                     <span class="error"></span>
                                 </div>
+
+                                <span style="color: red; font-style: italic">
+                                    {{ $errors->first('email') }}
+                                </span>
+
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-12">
@@ -145,6 +147,11 @@
                                     <span class="error"></span>
                                     <small id="emailHelp" class="form-text text-muted ml-3">Le mot de passe doit comprendre au moins 5 caractères</small>
                                 </div>
+
+                                <span style="color: red; font-style: italic">
+                                    {{ $errors->first('password') }}
+                                </span>
+
                             </div>
                             <div class="form-check my-4" style="margin-left: 100px;">
                                 <input class="form-check-input" type="checkbox" name="remember" value="1" id="check" checked>
@@ -152,6 +159,11 @@
                                     Se souvenir de moi
                                 </label>
                             </div>
+
+                            <span style="color: red; font-style: italic">
+                                {{ $errors->first('remember') }}
+                            </span>
+
                             <div class="singin-btn-validate" style="margin-left: 100px;">
                                 <button type="submit" class="btn col-6 row font-weight-bold" role="button">S'inscrire</button>
                             </div>
@@ -226,7 +238,7 @@
             </div>
 
             <div class="row">
-                <form class="col-12 px-4" method="post" action="" id="sinUpSumbit">
+                <form class="col-12 px-4" method="post" action="{{ route('check') }}" id="sinUpSumbit">
 
                     {{csrf_field()}}
 
@@ -351,6 +363,6 @@
         </div>
     </div>
 
-    <script src="{{asset('js/sing_up.js')}}"></script>
+    <script src=""></script>
 
 @stop

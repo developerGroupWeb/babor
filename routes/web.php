@@ -17,7 +17,7 @@ Route::get('login/sing_in', 'Authentic\\SinginController@singIn')->name('sing_in
 Route::post('login/sing_in/check', 'Authentic\\SinginController@check')->name('sing_in.check');
 
 Route::get('register/sing_up', 'Authentic\\SingupController@singUp')->name('sing_up');
-Route::post('register/sing_up/store', 'Authentic\\SingupController@store')->name('sing_up.store');
+Route::post('register/sing_up', 'Authentic\\SingupController@store')->name('check');
 
 Route::get('{page}', 'PageController@show')->name('page');
 

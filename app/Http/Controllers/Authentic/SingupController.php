@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Authentic;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\models\User;
-use App\models\Data;
+use App\Services\Authentic\SingUpService;
+use App\Http\Requests\Authentic\SingUpFormRequest;
+
 
 class SingupController extends Controller
 {
@@ -14,31 +15,22 @@ class SingupController extends Controller
         return view('authentic.sing_up');
     }
 
-    function store(Request $request){
+    function store(SingUpFormRequest $request){
 
-        //dd($request->all());
-
-        $insert = new User;
-        $insert->setName($request->input('name'));
-        $insert->save();
-
-        $insert_data = new Data;
-        $insert_data->user_id = $insert->id;
-        $insert_data->setName($request->input('name'));
-        $insert_data->email = $request->input('email');
-        $insert_data->birth = $insert_data->setBirthDay([
+        $error = SingUpService::checkDate([
             $request->input('day'),
             $request->input('month'),
-            $request->input('year'),
+            $request->input('year')
         ]);
-        $insert_data->gender   = $request->input('gender');
-        $insert_data->city     = $request->input('city');
-        $insert_data->password = $insert_data->hashPassword($request->input('password')) ;
-        $insert_data->remember = $request->input('remember');
 
-        $insert_data->save();
+        if(isset($error) && $error != ''){
 
-        return redirect()->route('sing_in', ['ref' => 'enjoy']);
+            return view('authentic.sing_up', ['error' => $error]);
+        }else{
+
+            if(SingUpService::storeService($request) == true)
+                return redirect()->route('sing_in', ['ref' => 'enjoy']);
+        }
 
     }
 }

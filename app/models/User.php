@@ -15,6 +15,10 @@ class User extends Model
       'updated_at',
     ];
 
+    protected $fillable = [
+        'name',
+    ];
+
     function data(){
 
         return $this->hasOne(Data::class);

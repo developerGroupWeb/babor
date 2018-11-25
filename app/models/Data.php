@@ -15,6 +15,17 @@ class Data extends Model
         'updated_at',
     ];
 
+    protected $fillable = [
+        'user_id',
+        'user_name',
+        'birth',
+        'city',
+        'gender',
+        'email',
+        'number',
+        'password',
+    ];
+
     function user(){
 
         return $this->belongsTo(User::class);
